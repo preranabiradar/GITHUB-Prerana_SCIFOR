@@ -1,0 +1,20 @@
+What is html?
+Html stands for hypertext markup language.it is uded to create web pages.it is the standard markup language.it uses tags and attributes.
+html consists of various elements and it is resposible for telling search engines to how to display page content. 
+
+what are the features of html?
+html is easy to learn .
+html is easy to use.
+html is a platform-independent.
+videos, and audio can be added on a web page.
+
+What is the MIME?
+MIME stands for multimedia internet mail extensions.
+MIME is used for differnet type of data transfer through electronic services. 
+
+What are void (empty)elements in html?
+empty elements that contains with no contain .
+example:
+<br>
+<hr>
+<img>
