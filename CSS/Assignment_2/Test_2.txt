@@ -19,7 +19,7 @@ Ther are five types of Selectors in CSS:-
 The CSS box model is a used to defines how the elements dimensions and spacing are calculated.The box model treats every HTML element is a rectangular  containing of 
 content, padding, border, and margin.The box model defines the layout of an HTML element.
 The box model contains following
-• content: It is a text or image. 
-• padding:space between the content and the border of an element.
-• border: we use border in between padding and content.
-• margin: we add margin outside the border
+1. Content: It is a text or image. 
+2. Padding:space between the content and the border of an element.
+3. Border: we use border in between padding and content.
+4. Margin: we add margin outside the border
