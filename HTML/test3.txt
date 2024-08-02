@@ -1,0 +1,52 @@
+1. What are semantic elements ?
+ answer:-
+        Semantic tags can be divided into two types.
+        1.Semantic tag :-
+                        It describes its meaning,its purpose,and it describes the type of content.
+              for example:-
+
+              <h1></h1>
+              h1 tags describes heading of the text.
+
+              <table></table>
+              Table tag descibes the table and inside of the content within the table.
+
+              <header></header>
+              Header is Present at the top of the webpage.Header tag describes the header of the webpage.
+             
+              <footer></footer>
+              Footer is present at the end of the webpage.Footer tag describes the footer of the webpage.
+
+              <section></section>
+               Section tag defines the section of documents such as chapters, headers,footers, or any other sections. The section tag divides the content into sections and subsections.
+
+              <h2>....</h2>,
+              <h3>....</h3>,
+              <h4>....</h4>,
+              <h5>....</h5>,
+              <h6>....</h6>,These all are heading tags.
+
+              <figure>
+              <main>
+              <main>
+              <nav>
+              <strong>
+              These all tags defines its content.
+
+
+
+        2.Non-semantic Tag :-
+                            Non-Semantic tags do not have a specific meaning.It is used to create general meaning for content without containing any additional information.
+
+                            For example :-
+
+                                 <span>text</span>
+                                 This tag adds anywhere in the tag and anywhere in the webpage.
+                                 We also add span tag in the paragraph tag.
+
+                                 <div></div>
+                                 It also a non semantic tag.We cannot decide the meaning of the text.
+
+                     
+
+
