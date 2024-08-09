@@ -1,42 +1,41 @@
+Q1. STYLE WEBPAGE ELEMENTS USING MULTIPLE CSS VARIABLES FOR SKY BLUE (PRIMARY COLOR), EMERALD GREEN (SECONDARY COLOR), DARK GRAY (TEXT COLOR), 12PX 24PX (BUTTON PADDING), AND 8PX (BORDER RADIUS). USE THESE VARIABLES TO STYLE A HEADING, BUTTON, AND PARAGRAPH ACCORDINGLY. 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
         :root {
             --primary-color: skyblue;
-            --secondary-color: emeraldgreen;
+            --secondary-color:  #50C878;
             --text-color: darkgray;
             --button-padding: 12px 24px;
             --border-radius: 8px;
         }
-        
+        body{
+           text-align: center;
+           padding: 20px;
+        }
         h1 {
             color: var(--primary-color);
-            font-size: 2em;
+            font-size: 22px;
         }
-        
-        p {
+         p {
             color: var(--text-color);
-            font-size: 1em;
+            font-size: 20px;
         }
-        
         button {
             background-color: var(--secondary-color);
             color: black;
             padding: var(--button-padding);
             border: none;
             border-radius: var(--border-radius);
-            font-size: 1em;
+            font-size: 16px;
             cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: var(--primary-color);
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test-3</title>
+    <title>Test-4</title>
 </head>
 <body>
     <h1>Welcome to My first Website</h1>
