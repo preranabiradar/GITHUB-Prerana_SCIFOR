@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beauty products</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .product-card {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 10px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .product-card img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            .product-card .price {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #333;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="container mt-4 bg-light">
+        <h1 class="text-center">Beauty Products</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" width="40%" height="50%" alt="Product-1">
+                    <div class="price">Rs 220</div>
+                </div>    
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvlGROdtD1_8jUQt36RiTAX2xDCh8ooq3eMA&s" alt="Product-2">
+                    <div class="price">Rs 330</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKnTOJJoys9vuK6i1VlXSg5zhUWe_Pxzz-bw&s" width="68%" alt="Product-3">
+                    <div class="price">Rs 439</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYX0Szkesjr3hO2W9wCW2_ezs0jXrCrKLFEA&s" alt="Product-4">
+                    <div class="price">Rs 539</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf1xmMhBNTQGI7cM6y2F2yw7hAMA-fXQJalw&s" width="42%"  alt="Product-5">
+                    <div class="price">Rs 139</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeDydo4ym6YzLAnXNYFj3mRna_bVVs1bO8_w&s" alt="Product-6">
+                    <div class="price">Rs 139</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw1CSEiUN8bdFfw4X1lHgO4dA7W6VZeaJKpA&s" width="45%" alt="Product-7">
+                    <div class="price">Rs 139</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqXw5F9UsAFrIedEOgJVC6BQfjM-ldpNbGlQ&s" width="171%" alt="Product-8">
+                    <div class="price">Rs 99</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSppux1ZNEr9slPyM2KYv31ox07RpEuJevRrA&s" width="51%" alt="Product-9">
+                    <div class="price">Rs 73</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EgZ7J_0he1ZNJs89YykfOkuXnpdzYKwk_w&s" width="74%" alt="Product-10">
+                    <div class="price">Rs 139</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOE13rCSz6SoLMgpyISV0BPx1l-aUQtpUmmA&s" width="74%" alt="Product-11">
+                    <div class="price">Ra 83</div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXsZI_tOVNIMuRQ2qV5rhjBUIGp5Cqo7E8Rw&s"  width="160%" height="60%" alt="Product-12">
+                    <div class="price">Rs 43</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+    
+</body>
+</html>
+                    

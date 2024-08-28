@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Project_1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="bg-light py-2">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+           
+            <div>
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-myntra-logo-icon-download-in-svg-png-gif-file-formats--shopping-brand-online-application-app-mobile-indian-companies-pack-logos-icons-2249158.png?f=webp&w=256" alt="Logo" width="30%" height="4%" class="img-fluid">
+            </div>
+
+            <nav class="navbar navbar-expand-md">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./women.html">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./kids.html">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./girls.html">Girls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./beauty.html">Beauty</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="d-flex">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input class="form-control border-start-0" type="search" placeholder="Search for products" aria-label="Search">
+                </div>
+            </form>
+
+
+            <div class="d-flex align-items-center p-">
+                <a href="#" class="me-3">
+                    <i class="bi bi-person fs-4"></i>
+                </a>
+                <a href="#" class="me-3">
+                    <i class="bi bi-heart fs-4"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-cart fs-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-2 mb-4 text-center">
+                <img src="data:image/jpeg;base64,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" class="img-fluid" alt="Product 1">
+                <p>$19.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkeWXRGncA57AgsGyqGowLUnWZkFjhD6JcbA&s/150x150" class="img-fluid" alt="Product 2">
+                <p>$29.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdry6_gIAQ9O2uT4QI0mQ0ZELG-DVMI8Arug&s/150x150" class="img-fluid" alt="Product 3">
+                <p>$39.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center"> 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiW3QpD94BBwewcM0m-ZUi56yiC6GlerlfDQ&s" class="img-fluid" width="63%" height="10%" alt="Product 4">
+                <p>$49.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://rukminim2.flixcart.com/image/750/900/xif0q/kids-top/4/a/m/11-12-years-children-dress-two-combo-09-10-j-2-fashion-original-imaghfv2hvwjgmme.jpeg?q=20&crop=true/120x120" class="img-fluid" width="93%" height="10%"  alt="Product 5">
+                <p>$59.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://assets.teenvogue.com/photos/5d40b50bed5b8d0008c6d08d/1:1/w_2778,h_2778,c_limit/Amazon%20Natural%20Beauty_Promo.jpg/150x150" class="img-fluid" alt="Product 6">
+                <p>$69.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/sari/o/o/z/free-combo26993-muta-fashion-unstitched-original-imagmfrmcrmzgydn.jpeg?q=90&crop=false/150x150" class="img-fluid" alt="Product 7">
+                <p>$79.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/kids-apparel-combo/h/r/3/6-12-months-pista-sp-ultrina-original-imagsjvysrtu8x9e.jpeg?q=90&crop=false/150x150" class="img-fluid" alt="Product 8">
+                <p>$89.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/l407mvk0/makeup-kit/m/d/d/all-in-one-professional-beauty-combo-for-girl-s-women-s-makeup-original-imagezzenagy5bhg.jpeg?q=90&crop=false/185x190" class="img-fluid" alt="Product 9">
+                <p>$99.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/kziqvm80/shopsy-kids-dress/d/b/z/9-10-years-pf0045-sky-blue-prena-fashion-original-imagbgr45wmjmssu.jpeg?q=90&crop=false/150x150" class="img-fluid" alt="Product 10">
+                <p>$109.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://resources.indianclothstore.com/resources/simage/K61819092023-Yellow-Banarasi-Jacquard-Kids-Indo-Western-Sherwani.jpg" class="img-fluid"  alt="Product 11">
+                <p>$119.99</p>
+            </div>
+            <div class="col-md-2 mb-4 text-center">
+                <img src="https://vastramay.com/cdn/shop/products/VASBSW027nCDCO_1.jpg?v=1657541542/120x120"  class="img-fluid" width="87%" height="10%" alt="Product 12">
+                <p>$129.99</p>
+            </div>
+        </div>
+
+<footer class="bg-secondary text-white mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Online Shopping</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./Men.html" class="text-white">Men</a></li>
+                    <li><a href="./Women.html" class="text-white">Women</a></li>
+                    <li><a href="./kids.html" class="text-white">Kids</a></li>
+                    <li><a href="./Girls.html" class="text-white">girls</a></li>
+                    <li><a href="./Beauty.html" class="text-white">Beauty</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h5>Experience Myntra App on Mobile</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://play.google.com/store/apps/details?id=com.myntra.android&hl=en_IN">Download App</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Keep in Touch</h5>
+                <a href="#" class="me-2">
+                    <i class="bi bi-facebook fs-4"></i>
+                </a>
+                <a href="#" class="me-2">
+                    <i class="bi bi-instagram fs-4"></i>
+                </a>
+                <a href="#" class="me-2">
+                    <i class="bi bi-youtube fs-4"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-twitter fs-4"></i>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Customer Policies</h5>
+                <ul class="list-unstyled">
+                    <li>Contact Us</li>
+                    <li>FAQ</a></li>
+                    <li>T&C</a></li>
+                    <li>Terms of Use</li>
+                    <li>Track Orders</li>
+                    <li>Shipping</li>
+                    <li>Cancellation</li>
+                    <li>Privacy policy</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled">
+                    <li>Blog</li>
+                    <li>Careers</li>
+                    <li>Corporate Information</li>
+                    <li>Site Map</li>
+                    <li>Cleartrip</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
