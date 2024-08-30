@@ -1,0 +1,92 @@
+<!-- create a responsive card using the foundation framework that displays an image at the top,followed by a title,description,and a call-to-action button at the bottom.ensure that the card layout adapts well to both mobile and desktop screens. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test-7</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <style>
+        body {
+            background-color: #043044; /* Light blue background color for the page */
+        }
+
+
+        .card {
+            border: 1px solid #200309;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: rgb(50, 165, 42);
+            margin: 0 auto; 
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-section {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .card-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #0078a0;
+            color: #fff;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        .card-button:hover {
+            background-color: #005f78;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell small-up-1 medium-up-2 large-up-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyrczAIemLdXDQfv7SXs4U6y-Zk1t998ylg&s/400x200" alt="Card Image">
+                    <div class="card-section">
+                        <h3 class="card-title">Beautiful Nature</h3>
+                        <p class="card-description">Nature is the physical world and everything that lives in it, including animals, plants, and events that are not made by people.<br> It also includes the forces and processes that exist independently of people, such as the weather, mountains, reproduction, and growth. </p>
+                        <button class="card-button">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+<!-- Include Foundation JS and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+ <script>
+    $(document).foundation();
+</script> 
+</body>
+</html>
+
+
+<!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWyrczAIemLdXDQfv7SXs4U6y-Zk1t998ylg&s -->
