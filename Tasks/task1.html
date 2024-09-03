@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: bisque;
+        }
+
+        .logo img {
+            height: 40px; 
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .text {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background-color:cadetblue;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            width: 30%;
+        }
+        footer{
+            background-color: aqua;
+        }
+
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card {
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text {
+                padding: 10px;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+   </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA0iPuk7XcrJJt8Fo306C_-hvNFA0GfSRoE2VfPoWj5A&s" alt="MyLogo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text">
+            <h1>Welcome to My Website</h1>
+            <p>Responsive page with HTML and CSS.</p>
+        </section>
+
+        <section class="content">
+            <div class="card">
+                <h2>Card 1</h2>
+                <p>Details about Card</p>
+            </div>
+            <div class="card">
+                <h2>Card 2</h2>
+                <p>Details about Card</p>
+            </div>
+            <div class="card">
+                <h2>Card 3</h2>
+                <p>Details about Card</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
