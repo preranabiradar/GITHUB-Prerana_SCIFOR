@@ -1,0 +1,63 @@
+ <!-- create a simple calculator using a switch statement that takes two numbers and an operator(+,-,*,/,%)and performs the resp operation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test-9.1</title>
+    <style>
+        body{
+            background-color:bisque;
+            font-size: larger;
+        }
+        h1{
+         text-align: center;  
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple calculator</h1>
+    <script>
+        function calculator() {
+            // Prompt the user for input
+            var val1 = parseFloat(prompt("Enter the first number:"));
+            var operator = prompt("Enter an operator (+, -, *, /, %):");
+            var val2 = parseFloat(prompt("Enter the second number:"));
+            var result;
+        
+            // Switch Case
+            switch (operator) {
+                case '+':
+                    result = val1 + val2;
+                    break;
+                case '-':
+                    result = val1 - val2;
+                    break;
+                case '*':
+                    result = val1 * val2;
+                    break;
+                case '/':
+                    if (val2 !== 0) {
+                        result = val1 / val2;
+                    } else {
+                        result = "Error: Division by zero!";
+                    }
+                    break;
+                case '%':
+                    if (val2 !== 0) {
+                        result = val1 % val2;
+                    } else {
+                        result = "Error: Division by zero!";
+                    }
+                    break;
+                default:
+                    result = "Invalid operator!";
+            }
+            document.write("Result is: " + result);
+        }
+        
+        // Calling the calculator function
+        calculator();
+        </script>
+</body>
+</html>
