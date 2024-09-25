@@ -1,0 +1,33 @@
+<!-- write a program to show difference between local scope and global scope -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <script>
+        // Global Scope:-We can use anywhere
+        var globalVariable = "It is a global variable";
+
+        function scope() {
+            // Local Scope 
+            var localVariable = "It is a local variable";
+
+            // Accessing both global and local variables inside the function
+            document.write(globalVariable);  
+            document.write(localVariable); 
+        }
+
+        // Accessing the global variable outside the function
+        document.write(globalVariable);  // Accessible
+
+        // Trying to access the local variable outside the function
+        document.write(localVariable);  // Error: localVariable is not defined
+    </script>
+</head>
+<body>
+    <h2>Scope</h2>
+    <button onclick="scope()">click Me</button>
+</body>
+</html>

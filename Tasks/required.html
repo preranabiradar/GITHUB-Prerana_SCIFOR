@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      text-align: center;
+    }
+    div{
+      padding: 10px;
+    }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Required field example</title>
+</head>
+<body >
+  <form>
+    <div>
+      <label for="name">Name(Uppercase only):</label>
+      <input type="text" pattern="[A-Z]+" required><br>
+    </div>
+
+   <div>
+      <label for="username">Username(lowercase only):</label>
+      <input type="text" pattern="[a-z]+" required><br>
+   </div>
+
+   <div>
+      <label for="password">Password:</label>
+      <input type="password" min="5"><br>
+    </div>
+
+   <div>
+      <label for="age">Age:</label>
+      <input type="number" min="10" max="60" required><br>
+   </div>
+
+   <div>
+      <input type="submit">
+   </div>
+  </form>  
+
+</body>
+</html>

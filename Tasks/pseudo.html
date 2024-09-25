@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p::first-line{
+      color:red;
+      background-color: black;
+      font-variant: small-caps;
+        }
+        h1::first-letter{
+            color: blue;
+        }
+        h2::before{
+            content: "Before: ";
+            color: blue;
+        }
+        h3::after {
+            content: "after: ";
+            color: red;
+        }
+        h4::first-letter{
+            color: aquamarine;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+</head>
+<body>
+    <p>This is para</p>
+    <h1>This is first heading</h1>
+    <h2>this is second heading</h2>
+    <h3>This is Third heading</h3>
+    <h4>This is fourth heading</h4>
+   
+</body>
+</html>
