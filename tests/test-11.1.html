@@ -1,0 +1,48 @@
+<!-- Create a class component using react app. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Component</title>
+    <style>
+        body{
+            text-align: center;
+            background-color:cadetblue;
+        }
+    </style>
+   
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Class Component
+        class Component extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    title: "Welcome to React",
+                    subtitle: "Class based Component"
+                };
+            }
+
+            // Display JSX
+            render() {
+                return (
+                    <div>
+                        <h1>{this.state.title}</h1>
+                        <h2>{this.state.subtitle}</h2>
+                    </div>
+                );
+            }
+        }
+
+        // Render the HeadingComponent 
+        ReactDOM.render(<Component />, document.getElementById('root'));
+    </script>
+</body>
+</html>
