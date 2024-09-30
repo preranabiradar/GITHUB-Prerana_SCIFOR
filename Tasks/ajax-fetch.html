@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax and Fetch api Example</title>
+    <style>
+        /* Basic styling*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:antiquewhite;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color:#333;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color:black;
+        }
+
+        /* Styling for the div where data will be displayed */
+        #data-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .data-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX and Fetch API Data Loading Example</h1>
+
+    <!-- Container for the buttons -->
+    <div id="button-container">
+        <button id="ajax-button">Load Data with AJAX</button>
+        <button id="fetch-button">Load Data with Fetch API</button>
+    </div>
+
+    <!-- Container for displaying the loaded data -->
+    <div id="data-container">
+        <!-- Data will be displayed here -->
+    </div>
+
+    <script>
+        const ajaxButton = document.getElementById('ajax-button');
+        const fetchButton = document.getElementById('fetch-button');
+        const dataContainer = document.getElementById('data-container');
+
+        // Dummy API
+        const api = 'https://jsonplaceholder.typicode.com/posts';
+
+        // Event listener for AJAX button
+        ajaxButton.addEventListener('click', function () {
+            // Create a new XMLHttpRequest object
+            const ajax = new XMLHttpRequest();
+
+            // GET-request for the posts
+            ajax.open('GET', api, true);
+
+            // function for a response data when request is completed
+            ajax.onload = function () {
+                if (ajax.status === 200) {
+                    // Parse JSON data
+                    const posts = JSON.parse(ajax.responseText);
+                    displayData(posts);
+                } else {
+                    console.error('Failed to load data using AJAX');
+                }
+            };
+
+            // Send the request
+            ajax.send();
+        });
+
+        // Event listener for Fetchapi button
+        fetchButton.addEventListener('click', function () {
+            // Fetch the data from the api
+            fetch(api)
+                .then(response => {
+                    // Check if the response is successful
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(posts => {
+                    // Display the data
+                    displayData(posts);
+                })
+                .catch(error => {
+                    console.error('Failed to load data using Fetch API', error);
+                });
+        });
+
+        
+          <!-- Function to display the data . -->
+        
+        function displayData(posts) {
+            // Clear previous content
+            dataContainer.innerHTML = '';
+
+            // Limit to first 5 posts for demonstration purposes
+            posts.slice(0, 5).forEach(post => {
+                // Create a div for each post and add content
+                const div = document.createElement('div');
+                div.className = 'data-item';
+                div.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p>${post.body}</p>
+                `;
+                // Append the post div to the data container
+                dataContainer.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
