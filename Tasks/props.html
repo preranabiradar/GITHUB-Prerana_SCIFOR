@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Props Example</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function A(props) {
+            return <h1>Hello, {props.name}!</h1>;
+        }
+
+        function B() {
+            return (
+                <div>
+                    <A name="Prerana" />
+                    <A name="Bhagyashri" />
+                    <A name="shital" />
+                </div>
+            );
+        }
+
+        // Render the App component into the root div
+        ReactDOM.render(<B />, document.getElementById('root'));
+    </script>
+</body>
+</html>
