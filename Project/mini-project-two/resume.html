@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio">
+    <title>Resume page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* Reset and Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* CSS Variables for Colors */
+        :root {
+            --primary-color:#2c2c2c; 
+            --secondary-color: #333; 
+            --color: #0ef;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #0ef;
+            font-size: 22px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .nav button {
+            background-color: var(--color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav button:hover {
+            background-color: #00acee;
+            transform: scale(1.05);
+        }
+
+        /* Resume Section */
+        .resume-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Grid Container for Education Cards */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; 
+            margin: 20px 0;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .card p{
+            text-align: justify;
+        }
+
+        .card {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: white;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .navbar {
+            margin-top: 380px;
+            padding: 5px;
+            border-radius: 60px;
+            background-color:var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        
+        .navlist {
+            display: flex;
+            list-style: none;
+            padding: 0px;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        
+        .navlist li {
+            margin: 0 10px;
+            position: relative;
+
+        }
+        
+        .navlist a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 28px;
+            transition: color 0.3s, transform 0.3s;
+            padding: 10px 20px;
+            border-radius: 40px;
+            position: relative;
+        }
+        
+        .navlist a:hover {
+            color: #00acee;
+            transform: scale(0.85);
+            background-color: rgba(0, 172, 238, 0.2);
+        }
+    
+        .navlist a::after {
+            content: attr(data-label);
+            position: absolute;
+            top: -40px; 
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00acee;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        
+        .navlist a:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -10px);
+        }
+        
+        /* Media Queries for Responsive Design */
+        @media (max-width: 1024px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .navbar {
+                width: 90%;
+            }
+        
+            .navlist a {
+                font-size: 26px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav button {
+                margin-bottom: 10px;
+            }
+
+            .navbar {
+                width: 100%;
+            }
+
+            .navlist a {
+                font-size: 24px;
+            }
+        }
+
+        /* Media Queries for Extra Small Devices (less than 576px) */
+        @media (max-width: 576x) {
+            .navbar {
+                flex-direction: column; 
+                align-items: center; 
+                padding: 1px; 
+            }
+        
+            .navlist {
+                flex-direction: row; 
+                align-items: center;
+            }
+        
+            .navlist a {
+                font-size: 20px; 
+                padding: 8px 15px;
+            }
+
+            .navlist li {
+                margin: 5px 0;
+            }
+
+            .navlist a::after {
+                display: visible; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Resume</h1>
+    <div class="resume-section">
+        <p>Welcome to my portfolio! Here you'll find my Education Details.</p>
+    </div>
+
+    <div class="nav">
+        <button id="show-education">Education Details</button>
+    </div>
+
+    <div class="card-container" id="education-container" style="display: none;">
+        <!-- Education Cards -->
+        <div class="card">
+            <h3>2024</h3>
+            <h1>Training Course</h1>
+            <h3>Meta Scifor Technology</h3>
+            <p>I am currently pursuing training from Meta Scifor Technology, where I am deepening my knowledge and skills in advanced software development techniques. Through this training, I am gaining hands-on experience in modern technologies, frameworks, and best practices that are essential for building robust and scalable applications. The program has helped me stay up-to-date with industry trends and has given me the confidence to tackle complex projects with greater efficiency and expertise.</p>
+        </div>
+        <div class="card">
+            <h3>2023</h3>
+            <h1>Programming Course</h1>
+            <h3>Mastering React - The Complete Guide</h3>
+            <p>I am diving into the world of React with this comprehensive course from Udemy. I am learning core concepts such as components, props, and state management, allowing me to create reusable UI elements and manage data efficiently. The course also guides me through advanced topics like hooks and context, enabling me to streamline my code and enhance application performance.</p>
+        </div>
+        <div class="card">
+            <h3>2021-2023</h3>
+            <h1>Master of Computer Application</h1>
+            <h3>SRTM University, Nanded</h3>
+            <p>I hold a Master of Computer Application (MCA) degree, which allowed me to deepen my expertise in computer science and its applications in real-world scenarios. Through this program, I enhanced my skills in advanced programming, software development, and project management. This degree equips me with a strong foundation in both theoretical concepts and practical skills.</p>
+        </div>
+        <div class="card">
+            <h3>2018-2021</h3>
+            <h1>Bachelor of Computer Science</h1>
+            <h3>SRTM University, Nanded</h3>
+            <p>I am a graduate with a Bachelor of Computer Science, where I developed a solid foundation in programming, algorithms, and data structures. This degree equipped me with the skills to analyze complex problems and create efficient solutions.</p>
+        </div>
+        <div class="card">
+            <h3>2016-2018</h3>
+            <h1>Highest Education</h1>
+            <h3>Maharashtra Board</h3>
+            <p>I am a high school graduate, having completed my 12th grade with a focus on Science. During this time, I developed a passion for learning and a strong foundation in various subjects, which motivated me to pursue further studies.</p>
+        </div>
+        <div class="card">
+            <h3>2016</h3>
+            <h1>Education</h1>
+            <h3>Karnataka Board</h3>
+            <p>I am a 10th-grade student who learned many important subjects, including math, science, and literature. I worked hard to improve my skills and understanding. This year helped me build a strong foundation for my future studies and inspired me to explore more about the world around me. I participated in class discussions and group projects, which taught me how to work well with others and think critically.</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <ul class="navlist">
+            <li><a href="index.html" data-label="Home"><i class='bx bx-home'></i></a></li>
+            <li><a href="about.html" data-label="About"><i class='bx bx-user'></i></a></li>
+            <li><a href="projects.html" data-label="Projects"><i class='bx bx-briefcase'></i></a></li>
+            <li><a href="#Resume" data-label="Resume"><i class='bx bx-file'></i></a></li>
+            <li><a href="contact.html" data-label="Contact"><i class='bx bx-envelope'></i></a></li>
+        </ul>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
