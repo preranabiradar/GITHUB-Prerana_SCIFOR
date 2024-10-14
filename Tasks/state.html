@@ -1,50 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React State Example</title>
+    <title>React Usestate example</title>
+    
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="useState"></div> 
 
     <script type="text/babel">
-        class NameChange extends React.Component {
-            constructor(props) {
-                super(props);
-                this.state = {
-                    name: 'Preraa Biradar',
-                    email: 'preraa@example.com' // Initial email
-                };
-            }
-
-            changeName = () => {
-                this.setState({ name: 'Bhagyashri Patil' }); // Update the name
-            };
-
-            changeEmail = () => {
-                this.setState({ email: 'bhagyashri@example.com' }); // Update the email
-            };
-
-            render() {
-                return (
-                    <div>
-                        <h1>Hello, {this.state.name}!</h1>
-                        <h2>Email: {this.state.email}</h2>
-                        <button onClick={this.changeName}>Change Name</button>
-                        <button onClick={this.changeEmail}>Change Email</button>
-                    </div>
-                );
-            }
+       
+        const { useState } = React;
+        function Counter() {
+            const [count, setCount] = useState(2); 
+            return (
+                <div>
+                    <p>You clicked {count} times</p>
+                    <button onClick={() => setCount(count + 1)}>Increment</button>
+                </div>
+            );
         }
-        ReactDOM.render(<NameChange />, document.getElementById('root'));
+
+      
+        const root = ReactDOM.createRoot(document.getElementById("useState"));
+        root.render(<Counter />);
     </script>
 </body>
 </html>

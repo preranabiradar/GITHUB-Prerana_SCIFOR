@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React useContext Example</title>
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="useContext"></div>
+
+  <script type="text/babel">
+    const { createContext, useContext } = React;
+
+    // Create the context
+    const MyContext = createContext();
+
+    // Display component that consumes the context
+    function Dis() {
+      const value = useContext(MyContext);
+      return <div>{value}</div>;
+    }
+
+    // App component that provides context
+    function App() {
+      return (
+        <MyContext.Provider value="hello good evening">
+          <Dis />
+        </MyContext.Provider>
+      );
+    }
+
+    // Render the App component into the DOM
+    ReactDOM.render(<App />, document.getElementById("useContext"));
+  </script>
+</body>
+</html>
