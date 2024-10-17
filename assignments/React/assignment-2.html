@@ -1,0 +1,89 @@
+<!-- Build a Todo List application using the useState hook. Store the todo items in an array and display them. Implement functionality to:
+
+1. Add new todo items
+2. Delete existing todo items
+3. Toggle completed status -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>assignment-2 of Todo List with React</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState } = React;
+
+    // Array to store the todo items
+    let todoItems = [];
+
+    // For generating a unique ID
+    const Id = () => '_' + Math.random().toString(36).substr(2, 9);
+
+    function TodoApp() {
+      const [todos, setTodos] = useState(todoItems);
+      const [newTodo, setNewTodo] = useState('');
+
+      // Add a new todo
+      const addTodo = () => {
+        if (newTodo.trim()) {
+          const updatedTodos = [...todos, { id: Id(), text: newTodo, completed: false }];
+          todoItems = updatedTodos; 
+          setTodos(updatedTodos);
+          setNewTodo('');
+        }
+      };
+      
+       // Delete a todo
+       const deleteTodo = (id) => {
+        const updatedTodos = todos.filter((todo) => todo.id !== id);
+        todoItems = updatedTodos;
+        setTodos(updatedTodos); 
+      };
+
+      // Toggle for showing the status of todo
+      const toggleTodo = (id) => {
+        const updatedTodos = todos.map((todo) =>
+          todo.id === id ? { ...todo, completed: !todo.completed } : todo
+        );
+        todoItems = updatedTodos; 
+        setTodos(updatedTodos); 
+      };
+
+      return (
+        <div>
+          <h1>Todo List</h1>
+          <input
+            type="text"
+            placeholder="Add a new todo"
+            value={newTodo}
+            onChange={(e) => setNewTodo(e.target.value)}
+          />
+          <button onClick={addTodo}>Add Todo</button>
+
+          <ul>
+            {todos.map((todo) => (
+              <li key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+                {todo.text}
+                <button onClick={() => toggleTodo(todo.id)}>
+                  {todo.completed ? 'Undo' : 'Complete'}
+                </button>
+                <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<TodoApp />, document.getElementById('root'));
+  </script>
+</body>
+</html>
+

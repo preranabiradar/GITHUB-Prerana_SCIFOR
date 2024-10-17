@@ -1,0 +1,43 @@
+<!-- Create a React application that displays a counter starting from 0. Use the useState hook to store the counter value. Implement buttons to increment, decrement, and reset the counter. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-1 of React Counter</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    div{
+        text-align: center;
+        margin-top: 50px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    // Create a Counter component
+    const Counter = () => {
+      // Using useState hook to store the counter value
+      const [count, setCount] = React.useState(0);
+
+      return (
+        <div >
+          <h1>Counter: {count}</h1>
+          <button onClick={() => setCount(count + 1)}>Increment</button>
+          <button onClick={() => setCount(count - 1)}>Decrement</button>
+          <button onClick={() => setCount(0)}>Reset</button>
+        </div>
+      );
+    };
+
+    // Render the Counter component in the root div
+    ReactDOM.render(<Counter />, document.getElementById('root'));
+
+  </script>
+</body>
+</html>
