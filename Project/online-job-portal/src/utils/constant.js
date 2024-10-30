@@ -1,0 +1,2 @@
+export const REGISTRED_USER = "REGISTRED_USER";
+export const LOGGED_USER = "LOGGED_USER";
