@@ -75,10 +75,6 @@ const SignUp = () => {
               </div>
               <div className="login-center-buttons">
                 <button type="submit">Sign Up </button>
-                {/* <button type="button">
-                  <img src={GoogleLogo} alt="Google Logo" />
-                  Sign Up with Google
-                </button> */}
               </div>
             </form>
           </div>
